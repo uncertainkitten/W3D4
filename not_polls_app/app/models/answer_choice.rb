@@ -1,4 +1,6 @@
 class AnswerChoice < ApplicationRecord
+  validates :question_id, :body, presence: true 
+
   belongs_to :question,
   class_name: :Question,
   primary_key: :id,
